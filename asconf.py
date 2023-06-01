@@ -12,7 +12,7 @@ def scale_out():
     client = (
         AsClient.new_builder()
         .with_credentials(credentials)
-        .with_region(AsRegion.value_of("ap-southeast-3"))
+        .with_region(AsRegion.value_of("tr-west-1"))
         .build()
     )
 
@@ -66,7 +66,7 @@ def scale_in():
     client = (
         AsClient.new_builder()
         .with_credentials(credentials)
-        .with_region(AsRegion.value_of("ap-southeast-3"))
+        .with_region(AsRegion.value_of("tr-west-1"))
         .build()
     )
 

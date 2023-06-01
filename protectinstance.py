@@ -15,7 +15,7 @@ def protect(instance_id):
     client = (
         AsClient.new_builder()
         .with_credentials(credentials)
-        .with_region(AsRegion.value_of("ap-southeast-3"))
+        .with_region(AsRegion.value_of("tr-west-1"))
         .build()
     )
 
@@ -58,7 +58,7 @@ def unprotect(instance_id):
     client = (
         AsClient.new_builder()
         .with_credentials(credentials)
-        .with_region(AsRegion.value_of("ap-southeast-3"))
+        .with_region(AsRegion.value_of("tr-west-1"))
         .build()
     )
 

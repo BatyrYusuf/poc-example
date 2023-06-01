@@ -3,7 +3,7 @@ from config import AK,SK
 obsClient = ObsClient(
     access_key_id=AK,
     secret_access_key=SK,
-    server="obs.ap-southeast-3.myhuaweicloud.com",
+    server="obs.tr-west-1.myhuaweicloud.com",
 )
 
 
