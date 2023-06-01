@@ -14,6 +14,7 @@ from asconf import scale_out
 from getinstanceid import get_instance_id
 from obsbucket import upload_to_obs
 from protectinstance import protect, unprotect
+import time
 
 app = Flask(__name__)
 
@@ -29,8 +30,9 @@ def data_page():
         uploadData = request.files["media"]
         data_file_name = uploadData.filename
         upload_to_obs(data_file_name)
-        unprotect(instance_id, as_id)
-        scale_in(as_id=as_id)
+        time.sleep(60)
+        unprotect(instance_id)
+        scale_in()
     return render_template("upload.html", hostname=hostname)
 
 

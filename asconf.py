@@ -46,7 +46,7 @@ def scale_out():
         request = UpdateScalingGroupRequest()
         request.scaling_group_id = as_id
         request.body = UpdateScalingGroupOption(
-            max_instance_number=100,
+            max_instance_number=4,
             desire_instance_number=(desire_state+1),
             min_instance_number=(min_state + 1)
         )
@@ -101,7 +101,7 @@ def scale_in():
         request = UpdateScalingGroupRequest()
         request.scaling_group_id = as_id
         request.body = UpdateScalingGroupOption(
-            max_instance_number=100,
+            max_instance_number=4,
             desire_instance_number=(desire_state - 1),
             min_instance_number=(min_state - 1)
         )
